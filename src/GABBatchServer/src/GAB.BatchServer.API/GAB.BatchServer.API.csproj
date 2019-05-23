@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>GAB.BatchServer.API</AssemblyName>
+    <PackageId>GAB.BatchServer.API</PackageId>
+    <ApplicationInsightsResourceId>/subscriptions/0ee7f01e-3ec7-41b4-a904-9160f04b2cdd/resourcegroups/GlobalAzureBootcamp/providers/microsoft.insights/components/GABBatchServerLocalDev</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/0ee7f01e-3ec7-41b4-a904-9160f04b2cdd/resourcegroups/GlobalAzureBootcamp/providers/microsoft.insights/components/GABBatchServerLocalDev</ApplicationInsightsAnnotationResourceId>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETCore.App" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Common\EventHubs.cs" />
+    <Compile Include="Common\LoggingEvents.cs" />
+    <Compile Include="Controllers\BatchController.cs" />
+    <Compile Include="Controllers\GetNewBatchResult.cs" />
+    <Compile Include="Controllers\OutputContent.cs" />
+    <Compile Include="Controllers\UploadOutputResult.cs" />
+    <Compile Include="Data\BatchServerContext.cs" />
+    <Compile Include="Data\BatchServerContextFactory.cs" />
+    <Compile Include="Data\Countries.cs" />
+    <Compile Include="Data\DbInitializer.cs" />
+    <Compile Include="Data\Storage.cs" />
+    <Compile Include="Exceptions\NoMoreAvailableInputsException.cs" />
+    <Compile Include="Exceptions\OutputParsingException.cs" />
+    <Compile Include="Migrations\20170402174056_BatchServerFirstMigration.cs" />
+    <Compile Include="Migrations\20170402174056_BatchServerFirstMigration.Designer.cs" />
+    <Compile Include="Migrations\20190314222326_GAB2019Outputs.cs" />
+    <Compile Include="Migrations\20190314222326_GAB2019Outputs.Designer.cs" />
+    <Compile Include="Migrations\20190407221942_IsNotPlanetOuput.cs" />
+    <Compile Include="Migrations\20190407221942_IsNotPlanetOuput.Designer.cs" />
+    <Compile Include="Migrations\20190410202113_AddedTargetDetailsToOutput.cs" />
+    <Compile Include="Migrations\20190410202113_AddedTargetDetailsToOutput.Designer.cs" />
+    <Compile Include="Migrations\BatchServerContextModelSnapshot.cs" />
+    <Compile Include="Models\Input.cs" />
+    <Compile Include="Models\LabUser.cs" />
+    <Compile Include="Models\Output.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\default.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Release.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="wwwroot\**\*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Https" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.EventHubs" Version="2.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+
+</Project>

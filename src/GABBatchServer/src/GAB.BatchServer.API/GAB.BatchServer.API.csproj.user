@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AutoRefresh>false</AutoRefresh>
+    <NameOfLastUsedPublishProfile>CustomProfile</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+    <ShowAllFiles>true</ShowAllFiles>
+    <WebStackScaffolding_DependencyDialogWidth>600</WebStackScaffolding_DependencyDialogWidth>
+    <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <RevDeBugCompilerPath>c:\users\davidjrodríguezherná\appdata\local\microsoft\visualstudio\15.0_b429af37\extensions\vijos0yu.sqy\tmcc\</RevDeBugCompilerPath>
+    <CustomAfterMicrosoftCommonTargets>c:\users\davidjrodríguezherná\appdata\local\microsoft\visualstudio\15.0_b429af37\extensions\vijos0yu.sqy\tmcc\RevDeBug.ImportAfter.targets</CustomAfterMicrosoftCommonTargets>
+    <RevDeBugActive>false</RevDeBugActive>
+    <SaveMetadataAsync>true</SaveMetadataAsync>
+    <RevDeBugDisableNuget>true</RevDeBugDisableNuget>
+    <RevDeBugMetadataPath>C:\Users\DavidJRodríguezHerná\Documents\RevDeBug\GAB.BatchServer\Metadata\\</RevDeBugMetadataPath>
+    <UseRevDeBugOnThisProject>false</UseRevDeBugOnThisProject>
+    <RevDeBugStateStorageType>LiveRecorder</RevDeBugStateStorageType>
+    <isNetCore>true</isNetCore>
+    <SendToServer>false</SendToServer>
+    <RecorderAddress>127.0.0.1</RecorderAddress>
+    <RecorderTCPPort>42742</RecorderTCPPort>
+    <PublishWithRevDeBug>false</PublishWithRevDeBug>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

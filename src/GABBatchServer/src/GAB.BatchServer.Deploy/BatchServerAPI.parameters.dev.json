@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "yourapi-whp"
+    },
+    "webSiteName": {
+      "value": "yourapi-dev"
+    },
+    "swagger.Enabled": {
+      "value": true
+    },
+    "sqlserverName": {
+      "value": "yoursqlserverapi"
+    },
+    "administratorLogin": {
+      "value": "yoursqlserveradmin"
+    },
+    "databaseName": {
+      "value": "APIDev"
+    },
+    "storageName": {
+      "value": "yourapidev"
+    },
+    "skuName": {
+      "value": "S1"
+    },
+    "skuCapacity": {
+      "value": 1
+    },
+    "administratorLoginPassword": {
+      "value": "P@ssW0rd1!"
+    },
+    "edition": {
+      "value": "Standard"
+    },
+    "requestedServiceObjectiveName": {
+      "value": "S0"
+    },
+    "minInputId": { "value": 0 },
+    "externalStorageBaseUrl": {
+      "value": "https://labfiles.blob.core.windows.net/inputs"
+    },
+    "minimumClientVersion": {
+      "value":  "GAB.Client/1.2.0.0" 
+    } 
+  }
+}
